@@ -13,31 +13,34 @@ console.log(max);
 
 let mas = [
     11,
+    30,
+    false,
     5.5,
     "строка1",
     25,
     "строка2",
     true,
-    9.81, [2, 34, 7],
-    10
+    9.81, [2, 34],
+    10, [12, 45, 0]
 ];
 let result1 = [];
 let result2 = [];
 let result3 = [];
 let result4 = [];
-
-for (let j = 0; j < mas.length; j++) {
-    if (mas[j] === "boolean") {
-        result1.push(mas[j]);
-    } else if (mas[j] === "object") {
-        result2.push(mas[j]);
-    } else if (mas[j] === "number") {
-        result3.push(mas[j]);
-    } else if (mas[j] === "string") {
-        result4.push(mas[j]);
+for (let j = 0; j < mas.length - 1; j++) {
+    let t = mas[j];
+    // console.log(typeof t);
+    if (typeof t === "object") {
+        result1.push(t);
+    } else if (typeof t === "boolean") {
+        result2.push(t);
+    } else if (typeof t === "number") {
+        result3.push(t);
+    } else if (typeof t === "string") {
+        result4.push(t);
     }
 }
-console.log(result1);
 console.log(result2);
+console.log(result1);
 console.log(result3);
 console.log(result4);
